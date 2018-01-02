@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spreadsheet_update</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>spreadsheet_update</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/johnlarkin/Desktop/Coding_Learning/github_files/crypto-sheets-update/spreadsheet_update.py">/Users/johnlarkin/Desktop/Coding_Learning/github_files/crypto-sheets-update/spreadsheet_update.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="oauth2client.client.html">oauth2client.client</a><br>
+<a href="coinmarketcap.html">coinmarketcap</a><br>
+</td><td width="25%" valign=top><a href="googleapiclient.discovery.html">googleapiclient.discovery</a><br>
+<a href="httplib2.html">httplib2</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="oauth2client.tools.html">oauth2client.tools</a><br>
+<a href="yaml.html">yaml</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-get_credentials"><strong>get_credentials</strong></a>()</dt><dd><tt>Gets&nbsp;valid&nbsp;user&nbsp;credentials&nbsp;from&nbsp;storage.<br>
+&nbsp;<br>
+If&nbsp;nothing&nbsp;has&nbsp;been&nbsp;stored,&nbsp;or&nbsp;if&nbsp;the&nbsp;stored&nbsp;credentials&nbsp;are&nbsp;invalid,<br>
+the&nbsp;OAuth2&nbsp;flow&nbsp;is&nbsp;completed&nbsp;to&nbsp;obtain&nbsp;the&nbsp;new&nbsp;credentials.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Credentials,&nbsp;the&nbsp;obtained&nbsp;credential.</tt></dd></dl>
+ <dl><dt><a name="-get_crypto_prices"><strong>get_crypto_prices</strong></a>(service, spreadsheet_id, crypto_symbol_range_name, to_write_range_name, data)</dt><dd><tt>Reads&nbsp;symbols&nbsp;from&nbsp;spreadsheet&nbsp;and&nbsp;makes&nbsp;corresponding&nbsp;query&nbsp;to&nbsp;CMC.<br>
+&nbsp;<br>
+More&nbsp;exactly,&nbsp;this&nbsp;parses&nbsp;the&nbsp;symbols&nbsp;from&nbsp;the&nbsp;spreadsheet&nbsp;and&nbsp;pulls&nbsp;that&nbsp;information&nbsp;from&nbsp;CoinMarketCap.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;with&nbsp;'value'&nbsp;string&nbsp;as&nbsp;key&nbsp;and&nbsp;real&nbsp;prices&nbsp;for&nbsp;cells&nbsp;as&nbsp;value&nbsp;of&nbsp;KVP.</tt></dd></dl>
+ <dl><dt><a name="-get_current_time_for_update"><strong>get_current_time_for_update</strong></a>(update_time_range_name)</dt><dd><tt>Gets&nbsp;current&nbsp;time&nbsp;and&nbsp;formats&nbsp;into&nbsp;string.&nbsp;<br>
+&nbsp;<br>
+Returns:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;dictionaries&nbsp;with&nbsp;range&nbsp;and&nbsp;values&nbsp;as&nbsp;specified&nbsp;by&nbsp;API&nbsp;call.</tt></dd></dl>
+ <dl><dt><a name="-get_prices_from_cmc"><strong>get_prices_from_cmc</strong></a>(flat_list_of_symbols)</dt><dd><tt>Gets&nbsp;prices&nbsp;for&nbsp;symbols&nbsp;passed&nbsp;in&nbsp;and&nbsp;formats&nbsp;correctly&nbsp;for&nbsp;API&nbsp;call.&nbsp;<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;price&nbsp;in&nbsp;USD&nbsp;and&nbsp;market&nbsp;cap&nbsp;in&nbsp;USD</tt></dd></dl>
+ <dl><dt><a name="-get_script_path"><strong>get_script_path</strong></a>()</dt><dd><tt>Returns:<br>
+The&nbsp;filepath&nbsp;wrt&nbsp;source&nbsp;python&nbsp;execution.</tt></dd></dl>
+ <dl><dt><a name="-get_spreadsheet_information"><strong>get_spreadsheet_information</strong></a>(file_name)</dt><dd><tt>Gets&nbsp;relevant&nbsp;spreadsheet&nbsp;information&nbsp;from&nbsp;storage.&nbsp;<br>
+&nbsp;<br>
+If&nbsp;nothing&nbsp;has&nbsp;been&nbsp;stored,&nbsp;this&nbsp;call&nbsp;will&nbsp;throw&nbsp;and&nbsp;log&nbsp;an&nbsp;error.&nbsp;<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary,&nbsp;with&nbsp;spreadsheetId&nbsp;and&nbsp;rangeName.</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Shows&nbsp;basic&nbsp;usage&nbsp;of&nbsp;the&nbsp;Sheets&nbsp;API.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nothing,&nbsp;just&nbsp;successfully&nbsp;updates&nbsp;the&nbsp;spreadsheet&nbsp;of&nbsp;your&nbsp;choice.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>APPLICATION_NAME</strong> = 'Google Sheets Account Update'<br>
+<strong>CLIENT_SECRET_FILE</strong> = 'client_secret.json'<br>
+<strong>DEBUG_MODE</strong> = True<br>
+<strong>SCOPES</strong> = 'https://www.googleapis.com/auth/spreadsheets'<br>
+<strong>SPREADSHEET_INFO</strong> = 'spreadsheet_information.yaml'<br>
+<strong>print_function</strong> = _Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 65536)</td></tr></table>
+</body></html>
